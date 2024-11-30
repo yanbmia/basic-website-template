@@ -8,6 +8,8 @@
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
   }
   
   /* Header */
@@ -18,7 +20,7 @@
     width: 100%;
     background: #333;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     transition: transform 0.3s ease-in-out; /* Smooth transition for hiding */
     z-index: 1000;
     display: flex;
@@ -33,7 +35,8 @@
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px; /* Space between navigation links */
+    flex-wrap: nowrap; /* Prevent wrapping */
   }
   
   .nav-links a {
@@ -48,7 +51,7 @@
   
   /* Main Content */
   main {
-    padding-top: 100px; /* Space for fixed header */
+    padding-top: 80px; /* Space for fixed header */
   }
   
   section {
@@ -100,8 +103,13 @@
   /* Responsive Design */
   @media (max-width: 768px) {
     .nav-links {
-      flex-direction: column;
-      gap: 10px;
+      justify-content: space-evenly; /* Ensure links are spaced evenly */
+      flex-wrap: nowrap; /* Prevent wrapping */
+      gap: 20px; /* Adjust gap for smaller screens */
+    }
+  
+    .nav-links a {
+      font-size: 16px; /* Smaller font for smaller screens */
     }
   
     .split-container {
